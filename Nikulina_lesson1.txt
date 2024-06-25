@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zagolovok1</title>
+	</head>
+
+	<body>
+	Text1, text2, text3...
+	N1, N2, N3...
+	</body>
+
+</html>
+
+
