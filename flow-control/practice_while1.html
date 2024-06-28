@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>OUTPUT #</title>
+                <script>
+
+                let question = prompt("Хотите вывести # ?:");
+                let i = 0;
+                let result = " ";
+
+                while (question) {
+                    let how_many = parseInt(prompt("Сколько раз вывести # ?:"));  
+                    
+                        while(i < how_many) {
+                            result += "#";
+                            i++;
+                        }
+                        //alert(result);
+                    document.write(result);
+                    question = prompt("Хотите вывести ещё раз?");
+                }
+               
+                </script>
+             </head>
+    </html>
