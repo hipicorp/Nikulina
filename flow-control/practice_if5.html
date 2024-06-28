@@ -2,10 +2,10 @@
     <html lang="en">
         <head>
             <meta charset="UTF-8">
-                <title>WHILE</title>
+                <title>COORDINATES</title>
                 <script>
-                let x = prompt("Введите x:");
-                let y = prompt("Введите y:");
+                let x = parseInt(prompt("Введите x:"));
+                let y = parseInt(prompt("Введите y:"));
                
 
                 if ((x>0) && (y>0) ) {
@@ -22,7 +22,7 @@
                     alert("Точка находится на оси Y ниже нуля"); }
                 else if ((x>0) && (y===0) ) {
                     alert("Точка находится на оси Х справа"); }
-                else if ((x>0) && (y===0) ) {
+                else if ((x<0) && (y===0) ) {
                     alert("Точка находится на оси Х слева"); }
                 else if ((x===0) && (y===0) ) {
                         alert("Точка находится в начале координат"); 
