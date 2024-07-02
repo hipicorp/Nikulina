@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="widt=device-width",>
+                <title>Function Practice</title>
+                <script>
+                
+                
+                let number1 = parseInt(prompt("Введите начало диапазона:"));
+                let number2 = parseInt(prompt("Введите конец диапазона:"));
+                
+                alert(print_Numbers(number1, number2, false));
+
+                function print_Numbers(start, end, isEven){
+                    let output = "";
+                    for (let i = start; i<=end; i++) {
+                        if (isEven && i % 2 ===0){
+                            output += 1;
+                        }
+                        document.write(output);
+                    }
+
+                }
+               
+            
+
+               </script>
+             </head>
+    </html>
+    </html>
