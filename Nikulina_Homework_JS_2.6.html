@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>CURRENCY</title>
+                <script>
+                	let quantity = parseInt(prompt("Введите количество USD:"));
+                    let currency = prompt("Введите в какую валюту хотите перевести EUR, UAN, AZN:");
+                    
+                    switch (currency) {
+                    
+                        case "EUR": 
+                            quantity = quantity * 88.12
+                            break;
+                        
+                        case "UAN": 
+                            quantity = quantity * 7.27
+                            break;
+                        
+                        case "AZN": 
+                            quantity = quantity * 1.7
+                            break;
+                        default: 
+                        alert("Вы ввели некорректные данные");
+                        break;
+                    }
+
+                    alert(quantity + " " + currency);
+            
+                </script>
+             </head>
+    </html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>NUMBER</title>
+                <script>
+                	let number = parseInt(prompt("Введите трехзначное число:"));
+                        alert(((number%10 === (number%100-number%10)/10) || (number%10 === ((number/10 - (number/10)%10)/10)) || (number%100-number%10)/10 === ((number/10 - (number/10)%10)/10)) ?
+                            "В трехзначном числе есть одинаковые цифры" : "В трехзначном числе нет одинаковых цифр");
+
+                </script>
+             </head>
+    </html>
