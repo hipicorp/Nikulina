@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-                <title></title>
-                <script>
-                	let length_circle = parseInt(prompt("Введите длину окружности:"));
-                    let perimetre_square = parseInt(prompt("Введите периметр квадрата:"));  
-                    let side_square = perimetre_square / 4;
-                    let radius_circle = length_circle/ (2*3.14);
-                    
-                if (2 *radius_circle <= side_square) {
-                alert("Окружность поместится в квадрат");}
-                else  {
-                    alert("Окружность не поместится в квадрат");} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <script>
+        let day = parseInt(prompt("Введите день в формате от 1 до 31:"));
+        let month = parseInt(prompt("Введите месяц в формате от 1 до 12:"));
+        let year = parseInt(prompt("Введите год:"));
 
-                </script>
-             </head>
-    </html>
+            if ((day<1 || day>31) || (month<1 || month>12) || ((month === 4 || month === 6 || month === 9 || month === 11) && (day <1 || day>30) || (month===2 && !isLeapYear(year) && day>28) || (day>29 && isLeapYear(year) && month===2))) {
+            alert("Введены некорректные данные");}
+
+            function isLeapYear(year) {
+                return (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0));
+            }
+
+            if (day === 31 || (day === 30 && (month === 4 || month === 6 || month === 9 || month === 11)) ||
+                (day === 28 && month === 2 && !isLeapYear(year)) ||
+                (day === 29 && month === 2)) {
+                day = 1;
+                month = month === 12 ? 1 : month + 1;
+                if (month === 1) {
+                    year += 1;
+                }
+            } else {
+                day += 1;
+            }
+
+
+            if ((month < 10) & (day < 10)) {
+                alert(`Следующая дата 0${day}.0${month}.${year}`);
+            } else if ((month > 9) & (day < 10)) {
+                alert(`Следующая дата 0${day}.${month}.${year}`);
+            } else if ((month < 10) & (day > 9)) {
+                alert(`Следующая дата ${day}.0${month}.${year}`);
+            } else {
+                alert(`Следующая дата ${day}.${month}.${year}`);
+            }
+    </script>
+</head>
+</html>
