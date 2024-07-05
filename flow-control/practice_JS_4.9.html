@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>ARRAY</title>
+                <script>
+
+                let number1 = parseInt(prompt("Введите начало диапазона:"));
+                let number2 = parseInt(prompt("Введите конец диапазона:"));
+        
+                alert(print_Numbers(number1, number2, false));
+
+                function print_Numbers(start, end, isEven) {
+                let output = "";
+                for (let i = start; i <= end; i++) {
+                    if (isEven && i % 2 === 0) {
+                    output += i + " ";
+                    } else if (!isEven && i % 2 !== 0) {
+                        output += i + " ";
+                    }
+                }
+                return output;
+                }
+                document.write(print_Numbers(number1, number2, false));
+                
+                </script>
+             </head>
+    </html>
+    
