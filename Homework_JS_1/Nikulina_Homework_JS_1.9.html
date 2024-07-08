@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>NUMBER</title>
+                <script>
+
+					let number = parseInt(prompt("Введите трехзначное число:"));
+                    let number1 = number % 10;
+                    let number2 = (number % 100 - ((number % 100) % 10)) / 10;
+                    let number3 = (number/10 - (number/10) % 10) / 10;
+				    alert(number1 + "" + number2 + "" + number3);
+
+                </script>
+             </head>
+    </html>

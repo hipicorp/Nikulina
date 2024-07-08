@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>CHOKOLATE</title>
+                <script>
+
+					let quantity_money = parseInt(prompt("Введите сумму, руб:"));
+                    let price = parseInt(prompt("Введите стоимость одной шоколадки, руб:"));
+                    let quantity_shokolate = Math.round(quantity_money / price);
+                    let change = quantity_money - quantity_shokolate * price;
+				    alert("На эти деньги Вы можете купить: " + quantity_shokolate + " шоколадок." + " Cдача: " + change + " руб.");
+
+                </script>
+             </head>
+    </html>
