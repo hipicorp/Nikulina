@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Practice</title>
+    <script>
+
+        function PrintMachine(fontSize, color, fontFamilies) {
+            this.fontSize = fontSize;
+            this.color = color;
+            this.fontFamilies = fontFamilies;
+
+
+            this.print = function(text) {
+                let output = `<p  style="font-size:${this.fontSize}px; 
+                color:${this.color}; 
+                font-family:${this.fontFamilies};"> 
+                ${text}</p>`;
+
+                document.write(output);
+            }
+        }
+
+        let printMachine = new PrintMachine(130, "green", "Arial");
+
+        printMachine.print("Образец шрифта");
+
+        let name = printMachine.getName();
+        alert(name);
+
+
+
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Массив случайных чисел</title>
+    <script>
+        // ... (остальные функции остаются без изменений)
+
+        function removeElement(array, index) {
+            if(index < array.length) {
+                array.splice(index, 1);
+            }
+        }
+
+        let randomNums = generateArray();
+        show(randomNums);
+        showEvenElements(randomNums);
+        let totalSum = summ(randomNums);
+        document.write("Сумма всех чисел: " + totalSum + "<br>");
+        let maxElement = findMax(randomNums);
+        document.write("Максимальный элемент: " + maxElement + "<br>");
+
+        // Пример использования функции removeElement
+        removeElement(randomNums, 2); // Удаляем элемент с индексом 2
+        show(randomNums); // Показываем обновленный массив
+    </script>
+</head>
+</html>

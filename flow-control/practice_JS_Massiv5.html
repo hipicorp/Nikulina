@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Массив случайных чисел</title>
+    <script>
+        function generateArray() {
+            let array = [];
+            for (let i = 0; i < 10; i++) {
+                array[i] = Math.floor(Math.random() * 100);
+            }
+            return array;
+        }
+
+        function show(array){
+            document.write("Элементы массива: " + array.join(', ') + "<br>");
+        }
+
+        function showEvenElements(array){
+            document.write("Элементы с четными индексами: ");
+            for(let i = 0; i < array.length; i += 2){
+                document.write(array[i] + ' ');
+            }
+            document.write("<br>");
+        }
+
+        function summ(array) {
+            let sum = 0;
+            for(let i = 0; i < array.length; i++){
+                sum += array[i];
+            }
+            return sum;
+        }
+
+        function findMax(array) {
+            let max = array[0];
+            for(let i = 1; i < array.length; i++){
+                if(array[i] > max){
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        function insertElement(array, index, element) {
+            if(index >= array.length) {
+                array.push(element);
+            } else {
+                array.splice(index, 0, element);
+            }
+        }
+
+        let randomNums = generateArray();
+        show(randomNums);
+        showEvenElements(randomNums);
+        let totalSum = summ(randomNums);
+        document.write("Сумма всех чисел: " + totalSum + "<br>");
+        let maxElement = findMax(randomNums);
+        document.write("Максимальный элемент: " + maxElement + "<br>");
+
+        // Пример использования функции insertElement
+        insertElement(randomNums, 2, 58); // Добавляем число 58 на позицию с индексом 2
+        show(randomNums); // Показываем обновленный массив
+    </script>
+</head>
+</html>

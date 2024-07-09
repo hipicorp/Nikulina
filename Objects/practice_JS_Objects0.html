@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Practice</title>
+    <script>
+        // Определение класса PrintMachine
+        function PrintMachine(fontSize, color, fontFamilies) {
+            this.fontSize = fontSize;
+            this.color = color;
+            this.fontFamilies = fontFamilies;
+        }
+
+        // Добавление метода print к прототипу класса PrintMachine
+        PrintMachine.prototype.print = function(text) {
+            // Использование свойств экземпляра класса для стилизации текста
+            document.write(`<span style="font-size:${this.fontSize}px; color:${this.color}; font-family:${this.fontFamilies};">${text}</span>`);
+        };
+        
+        // Создание экземпляра класса PrintMachine
+        let printMachine = new PrintMachine(20, "black", "Times New Roman");
+
+        // Вывод информации о стилях шрифта
+        document.write("Size: " + printMachine.fontSize + " " + printMachine.color + " " + printMachine.fontFamilies + "<br/>");
+        
+        // Вызов метода print для вывода текста с заданными стилями шрифта
+        printMachine.print("Это текст с заданными стилями шрифта.");
+    </script>
+</head>
+<body>
+    <!-- Тело документа -->
+</body>
+</html>

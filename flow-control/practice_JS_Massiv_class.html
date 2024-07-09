@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ARRAY</title>
+    <script>
+        // Функция для генерации массива случайных чисел
+        function generateArray(length) {
+            let array = [];
+            for (let i = 0; i < length; i++) {
+                array.push(Math.floor(Math.random() * 100));
+            }
+            return array;
+        }
+
+        // Функция для вывода суммы элементов массива
+        function summ(array) {
+            let sum = 0;
+            for(let i = 0; i < array.length; i++){
+                sum += array[i];
+            }
+            return sum;
+        }
+
+        // Генерация массива случайных чисел
+        let randomNums = generateArray(10);
+
+        // Вывод длины массива
+        document.write("Длина массива: " + randomNums.length + "<br>");
+
+        // Вывод элементов массива и их суммы
+        document.write("Элементы массива: " + randomNums.join(', ') + "<br>");
+        document.write("Сумма всех чисел: " + summ(randomNums) + "<br>");
+    </script>
+</head>
+</html>

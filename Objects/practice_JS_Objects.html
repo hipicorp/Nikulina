@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Practice</title>
+    <script>
+
+        function User(firstName, lastName, age, city, street, home) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.city = city;
+            this.street = street;
+            this.home = home;
+        }
+
+        let user = new User("Tom", "Adams", 25, "New York", "Avenyu", 32);
+  
+        // let user = {
+        // font: "Tom",
+        // color: "Adams",
+        // font families: 25,
+        // city: "New York",
+        // street: "Avenyu",
+        // home: "32"
+        // }
+
+    document.write(user["firstName"] + " " + user["lastName"] + " " + user["age"] + " age" + "<br/>");
+
+    document.write(`${user.firstName} lives in ${user.city}`);
+
+    </script>
+</head>
+</html>
