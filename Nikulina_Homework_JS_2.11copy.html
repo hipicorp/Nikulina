@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title></title>
+                <script>
+                    let data = parseInt(prompt("Введите день в формате от 1 до 31:"));
+                    let month = parseInt(prompt("Введите месяц в формате от 1 до 12:"));
+                    let year = parseInt(prompt("Введите год:"));
+
+                    function isLeapYear(year) {
+                        if ((year%400===0 || year%4===0) && (year%100 !==0)) {
+                            return  1;
+                            return  0;
+                        }
+                    }
+                        
+                    if ((data === 31) || (data ===30 && (month === 4 || month === 6 || month === 9 || month === 11)) ||
+                     (data ===29 && (month === 2 && isLeapYear(year)===1)) || (data ===28 && (month === 2 && isLeapYear(year)===0)) ||
+
+                        if (month !=12)
+                        data = 1; 
+                    month = month + 1;} 
+                    else { data = 1; 
+                        month =  1;
+                        year = year + 1;}
+                    
+                    if ((month !== 4 || month !== 6 || month !== 9 || month !== 11) && data !==30) {
+                    data = data + 1; }
+                    else {data = 1;
+                        month = month + 1;
+                    }
+                    if (month !==2 && res !==1 && data !==29)
+                    {data = data + 1;
+                    }
+
+                    else {data = 1;
+                        month = 3;
+                    }
+                    
+                    if (month !==2 && res !==0 && data !==28)
+                    {data = data + 1;
+                    }
+                    else {data = 1;
+                        month = 3;
+                    }
+
+                    alert("Дата, следующая за указанной:" + " " + data + "." + month + "." + year);
+                </script>
+             </head>
+    </html>

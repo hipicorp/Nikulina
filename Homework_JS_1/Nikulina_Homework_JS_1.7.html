@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>QUANTITY_FILES</title>
+                <script>
+
+					let quantity_GB = parseInt(prompt("Введите объем флешки, Гб:"));
+                    const PER_MB = 1024;
+                    const FILE_SIZE_MB = 820;
+                    let quantity_files = Math.round(PER_MB * quantity_GB / FILE_SIZE_MB);
+					alert("На флешку поместится: " + quantity_files + " файлов размером 820 Mб");
+
+                </script>
+             </head>
+    </html>
