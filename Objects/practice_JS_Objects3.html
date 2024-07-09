@@ -5,29 +5,35 @@
     <title>Objects Practice</title>
     <script>
 
-// Задание 2
-// Реализовать класс, описывающий новость (заголовок, текст, 
-// массив тегов, дата публикации). В классе необходимо реализовать 
-// один метод print, который выводит всю информацию в таком 
-// виде, как на рисунке 1.
-// Обратите внимание на то, как выводится дата:
-// ■ если с даты публикации прошло менее дня, то выводится 
-// «сегодня»;
-// 2
-// ■ если с даты публикации прошло менее недели, то выводится «N дней назад»;
-// ■ в остальных случаях, полная дата в формате «дд.мм.гггг»
+// Задание 3
+// Реализовать класс, описывающий новостную ленту. 
+// Класс должен содержать:
+// ■ массив новостей;
+// ■ свойство, которое возвращает количество новостей;
+// ■ метод для вывода на экран всех новостей;
+// ■ метод для добавления новости;
+// ■ метод для удаления новости;
+// ■ метод для сортировки новостей по дате (от последних новостей до старых);
+// ■ метод для поиска новостей по тегу (возвращает массив 
+// новостей, в которых указан переданный в метод тег).
+// Продемонстрировать работу написанных методов.
 
-        function Clas(font_Size, color, font_families) {
-            this.font_Size = font_Size;
-            this.color = color;
-            this.font_families = font_families;
-
+        function News(title, text, arrayOfTags, fpublicationDate) {
+            this.title = title;
+            this.text = text;
+            this.arrayOfTags = arrayOfTags;
+            this.fpublicationDate = publicationDate;
         }
 
-        let clas = new Clas(14, "black", "Times New Roman");
+        let news = new News(14, "black", "Times New Roman");
+
+        function Date()
+        let date = new Date();
     
-    if 
-    document.write("Size: " + clas.font_Size + " " + clas.color + " " + clas.font_families + "<br/>");
+    if (date > date + 14) {
+    document.write(); }
+
+    else document.write();
 
 
     </script>
